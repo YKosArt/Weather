@@ -92,13 +92,13 @@ header p {
                 box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
             }
             .navbar a:active {
-                background: #1565c0;
+                background: #667eea;
                 transform: translateY(1px) scale(0.98);
                 box-shadow: 0 2px 6px rgba(21, 101, 192, 0.18);
             }
 .navbar {
     width:100%; 
-    background:#2196f3; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
     padding:0;
 }
 .navbar ul {
