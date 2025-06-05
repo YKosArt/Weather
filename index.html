@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar" >
+        <ul >
+            <li>
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+                <a href="weather.html" class="nav-link" >Weather</a>
+            </li>
+            <li>
+                <a href="Map.html" class="nav-link" >Forecast</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <p>Current weather and forecast for your location</p>
+        </header>
+        <main class="grid">
+            <section id="getWeather" class="card"><div id="weather"></div></section>
+       <!--<section class="card">
+                <canvas id="forecastChart" aria-label="Weather forecast chart"></canvas>
+            </section>
+                Опис:
+                Даний фрагмент коду реалізує певну функціональність у програмі.
+            -->
+          
+            <section class="card widget-section">
+                <div id="openweathermap-widget-1"></div>
+            </section>
+        </main>
+    </div>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <script>
+        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+        window.myWidgetParam.push({
+            id: 1,
+            cityid: '697230',
+            appid: '7cba2aa4f25b06ce176f3bd32c6caaad',
+            units: 'metric',
+            containerid: 'openweathermap-widget-1',
+        });
+        (function () {
+            var script = document.createElement('script');
+            script.async = true;
+            script.charset = "utf-8";
+            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(script, s);
+        })();
+    </script>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
