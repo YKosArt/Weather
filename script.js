@@ -10,7 +10,7 @@
       .then(data => {
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-        <p><strong>місто:</strong> ${data.name}</p>
+        <p><strong>Місто:</strong> ${data.name}</p>
           <p><strong>Температура:</strong> ${data.main.temp}°C</p>
           <p><strong>Погода:</strong> ${data.weather[0].description}</p>
           <p><strong>Вологість:</strong> ${data.main.humidity}%</p>
